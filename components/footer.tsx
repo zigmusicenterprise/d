@@ -75,18 +75,18 @@ export function Footer() {
           {/* CTA Section */}
           <div className="flex-1">
             <h2 className="text-[7vw] lg:text-[3.5vw] leading-[1.1] mb-8 font-light">
-              Pronto para elevar <br />
-              o seu <span className="text-[#FF4532] font-semibold">som?</span>
+              Ready to elevate <br />
+              your <span className="text-[#FF4532] font-semibold">sound?</span>
             </h2>
             <p className="text-white/60 text-base mb-8 max-w-md">
-              Junte-se a milhares de ouvintes que já descobriram a liberdade do ZIG.
+              Join thousands of listeners who have already discovered ZIG's freedom.
             </p>
             
             {/* Newsletter Box */}
             <form onSubmit={handleSubmit} className="flex items-center bg-white/[0.03] border border-white/5 p-2 rounded-full max-w-[450px] backdrop-blur-xl">
               <input
                 type="email"
-                placeholder="seu@email.com"
+                placeholder="your@email.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="bg-transparent border-none px-6 py-4 text-white text-base flex-1 outline-none placeholder:text-white/40"
@@ -95,7 +95,7 @@ export function Footer() {
                 type="submit"
                 className="bg-white text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm cursor-pointer transition-all duration-300 hover:bg-[#FF4532] hover:text-white hover:-translate-y-0.5 hover:shadow-[0_10px_20px_rgba(255,69,50,0.2)] whitespace-nowrap flex-shrink-0"
               >
-                Conectar
+                Connect
               </button>
             </form>
           </div>
@@ -105,19 +105,19 @@ export function Footer() {
             {/* Navigation Column */}
             <div className="flex flex-col gap-4">
               <h4 className="text-xs tracking-[3px] text-white/30 mb-4 font-semibold">
-                NAVEGAÇÃO
+                NAVIGATION
               </h4>
               <Link href="#" className="text-white/60 text-base hover:text-[#FF4532] hover:translate-x-1 transition-all">
-                Início
+                Home
               </Link>
-              <Link href="#descobrir" className="text-white/60 text-base hover:text-[#FF4532] hover:translate-x-1 transition-all">
-                Descobrir
+              <Link href="#discover" className="text-white/60 text-base hover:text-[#FF4532] hover:translate-x-1 transition-all">
+                Discover
               </Link>
               <Link href="#playlists" className="text-white/60 text-base hover:text-[#FF4532] hover:translate-x-1 transition-all">
                 Playlists
               </Link>
-              <Link href="#biblioteca" className="text-white/60 text-base hover:text-[#FF4532] hover:translate-x-1 transition-all">
-                Biblioteca
+              <Link href="#library" className="text-white/60 text-base hover:text-[#FF4532] hover:translate-x-1 transition-all">
+                Library
               </Link>
             </div>
 
@@ -137,10 +137,10 @@ export function Footer() {
                 LEGAL
               </h4>
               <Link href="/privacy" className="text-white/60 text-base hover:text-[#FF4532] hover:translate-x-1 transition-all">
-                Privacidade
+                Privacy
               </Link>
               <Link href="/terms" className="text-white/60 text-base hover:text-[#FF4532] hover:translate-x-1 transition-all">
-                Termos
+                Terms
               </Link>
               <Link href="/cookies" className="text-white/60 text-base hover:text-[#FF4532] hover:translate-x-1 transition-all">
                 Cookies
@@ -163,7 +163,7 @@ export function Footer() {
               <span className="text-white font-bold text-lg tracking-wide">ZIG</span>
             </div>
             <span className="text-sm text-white/50">
-              © 2026 ZIG. Todos os direitos reservados.
+              © 2026 ZIG. All rights reserved.
             </span>
           </div>
 

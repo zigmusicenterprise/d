@@ -93,14 +93,14 @@ export default function LandingPage() {
         </div>
 
         <nav className="hidden md:flex items-center gap-10">
-          <Link href="#descobrir" className="text-white/80 hover:text-white text-sm transition-all">
-            Descobrir
+          <Link href="#discover" className="text-white/80 hover:text-white text-sm transition-all">
+            Discover
           </Link>
           <Link href="#playlists" className="text-white/80 hover:text-white text-sm transition-all">
             Playlists
           </Link>
-          <Link href="#biblioteca" className="text-white/80 hover:text-white text-sm transition-all">
-            Biblioteca
+          <Link href="#library" className="text-white/80 hover:text-white text-sm transition-all">
+            Library
           </Link>
         </nav>
 
@@ -109,7 +109,7 @@ export default function LandingPage() {
             onClick={() => setIsAuthModalOpen(true)}
             className="bg-white/5 border border-white/10 backdrop-blur-xl text-white hover:bg-white hover:text-black rounded-full px-6 h-10 text-sm font-medium transition-all duration-300"
           >
-            Iniciar sessão
+            Sign In
           </Button>
         </div>
       </header>
@@ -131,16 +131,16 @@ export default function LandingPage() {
         {/* Hero Content */}
         <div className="absolute left-[10%] md:left-[30%] top-[38%] w-[80%] md:w-[25vw] z-10 text-left animate-fadeInUp">
           <h1 className="text-[8vw] md:text-[3.3vw] leading-[1.1] mb-8 font-light tracking-tight text-white">
-            Sem <span className="font-semibold">limites.</span><br />
-            Sem <span className="font-semibold">anúncios.</span><br />
-            Só <span className="font-semibold">música.</span>
+            No <span className="font-semibold">limits.</span><br />
+            No <span className="font-semibold">ads.</span><br />
+            Just <span className="font-semibold">music.</span>
           </h1>
 
           <Button 
             onClick={() => setIsAuthModalOpen(true)}
             className="bg-gradient-to-r from-[#FF4532] to-[#FF867E] text-white hover:scale-105 hover:shadow-[0_25px_50px_rgba(255,69,50,0.5)] rounded-xl px-6 h-12 text-sm font-medium transition-all duration-300 group flex items-center gap-3"
           >
-            Começar a ouvir Agora
+            Start Listening Now
             <div className="bg-white rounded-lg w-8 h-8 flex items-center justify-center group-hover:w-full transition-all duration-300">
               <ArrowRight className="w-4 h-4 text-[#FF4532]" />
             </div>
@@ -150,13 +150,13 @@ export default function LandingPage() {
         {/* Hero Description */}
         <div className="absolute right-[5%] bottom-[10%] w-[90%] md:w-[16vw] text-left md:text-left z-10 animate-fadeInRight">
           <p className="text-[4vw] md:text-[1.1vw] font-light leading-relaxed text-white/80">
-            O primeiro app <span className="font-semibold">100% grátis</span> para ouvir músicas em tempo real com seus amigos.
+            The first <span className="font-semibold">100% free</span> app to listen to music in real-time with your friends.
           </p>
         </div>
       </section>
 
       {/* Discover Section */}
-      <section id="descobrir" className="bg-black py-32 px-[5%]">
+      <section id="discover" className="bg-black py-32 px-[5%]">
         <div className="max-w-[1600px] mx-auto">
           {/* Featured Card + Top Charts Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-[1.8fr_1fr] gap-12 mb-20">
@@ -284,24 +284,24 @@ export default function LandingPage() {
       {/* CTA Section */}
       <section className="py-24 px-6 text-center bg-black">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-          Obrigado por ouvir. Agora, junte-se a nós.
+          Thanks for listening. Now join us.
         </h2>
         <p className="text-white/70 text-sm mb-8 max-w-md mx-auto">
-          Salve faixas, siga artistas e crie playlists. Tudo grátis.
+          Save tracks, follow artists, and create playlists. All free.
         </p>
         <Button 
           onClick={() => setIsAuthModalOpen(true)}
           className="bg-gradient-to-r from-[#FF4532] to-[#FF867E] text-white hover:scale-105 hover:shadow-[0_25px_50px_rgba(255,69,50,0.5)] rounded-full px-10 h-12 text-sm font-semibold transition-all duration-300"
         >
-          Criar conta
+          Create Account
         </Button>
         <p className="text-white/50 text-sm mt-6">
-          Já tem uma conta?{" "}
+          Already have an account?{" "}
           <button 
             onClick={() => setIsAuthModalOpen(true)}
             className="text-white hover:underline font-medium"
           >
-            Entrar
+            Sign In
           </button>
         </p>
       </section>

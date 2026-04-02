@@ -29,7 +29,7 @@ export function Sidebar() {
             className="flex items-center gap-3 px-3 py-2 text-sm text-white bg-secondary rounded hover:bg-secondary/80 transition-colors"
           >
             <TrendingUp className="w-4 h-4 text-primary" />
-            Descobrir
+            Discover
           </Link>
           <Link 
             href="/feed" 
@@ -43,14 +43,14 @@ export function Sidebar() {
             className="flex items-center gap-3 px-3 py-2 text-sm text-muted-foreground hover:text-white hover:bg-secondary rounded transition-colors"
           >
             <Radio className="w-4 h-4" />
-            Estações
+            Stations
           </Link>
         </nav>
 
         {/* Your Library */}
         <div className="mb-6">
           <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 px-3">
-            Sua Biblioteca
+            Your Library
           </h3>
           <nav className="space-y-1">
             <Link 
@@ -58,14 +58,14 @@ export function Sidebar() {
               className="flex items-center gap-3 px-3 py-2 text-sm text-muted-foreground hover:text-white hover:bg-secondary rounded transition-colors"
             >
               <History className="w-4 h-4" />
-              Histórico
+              History
             </Link>
             <Link 
               href="/library/likes" 
               className="flex items-center gap-3 px-3 py-2 text-sm text-muted-foreground hover:text-white hover:bg-secondary rounded transition-colors"
             >
               <Heart className="w-4 h-4" />
-              Curtidas
+              Likes
             </Link>
             <Link 
               href="/library/playlists" 
@@ -79,7 +79,7 @@ export function Sidebar() {
               className="flex items-center gap-3 px-3 py-2 text-sm text-muted-foreground hover:text-white hover:bg-secondary rounded transition-colors"
             >
               <Clock className="w-4 h-4" />
-              Ouvir Depois
+              Listen Later
             </Link>
           </nav>
         </div>
@@ -87,7 +87,7 @@ export function Sidebar() {
         {/* Genres */}
         <div className="mb-6">
           <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 px-3">
-            Gêneros
+            Genres
           </h3>
           <div className="flex flex-wrap gap-2 px-3">
             {genres.map((genre) => (
@@ -104,7 +104,7 @@ export function Sidebar() {
         {/* Trending Artists */}
         <div>
           <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3 px-3">
-            Artistas em Alta
+            Trending Artists
           </h3>
           <div className="space-y-2">
             {trendingArtists.map((artist) => (
@@ -119,7 +119,7 @@ export function Sidebar() {
                 />
                 <div>
                   <p className="text-sm text-white font-medium">{artist.name}</p>
-                  <p className="text-xs text-muted-foreground">{artist.followers} seguidores</p>
+                  <p className="text-xs text-muted-foreground">{artist.followers} followers</p>
                 </div>
               </div>
             ))}

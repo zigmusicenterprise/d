@@ -643,8 +643,8 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
 
           {/* Bottom Left Text */}
           <div className="absolute left-[67px] bottom-[150px] w-[170px] text-white text-[13px] leading-[1.4] font-['Inter',sans-serif]">
-            <span>Salas compartilhadas<br />playlists colaborativas e áudio em </span>
-            <span className="font-semibold">alta fidelidade.</span>
+            <span>Shared rooms<br />collaborative playlists and </span>
+            <span className="font-semibold">high-fidelity audio.</span>
           </div>
 
         </div>

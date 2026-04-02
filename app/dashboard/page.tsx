@@ -205,9 +205,9 @@ export default function DashboardPage() {
           {/* Nav Items */}
           {[
             { id: "home", icon: Home, label: "Home" },
-            { id: "discover", icon: Compass, label: "Descobrir" },
+            { id: "discover", icon: Compass, label: "Discover" },
             { id: "playlist", icon: Library, label: "Playlists" },
-            { id: "radio", icon: Radio, label: "Rádio" },
+            { id: "radio", icon: Radio, label: "Radio" },
             { id: "podcasts", icon: Mic2, label: "Podcasts" },
           ].map((item) => (
             <button
@@ -258,7 +258,7 @@ export default function DashboardPage() {
                 : "text-white/40 group-hover:text-[#FF4532]"
             }`} />
             <div className="absolute left-full ml-3 px-3 py-1.5 bg-[#1a1e1f] border border-white/10 rounded-lg text-white text-xs font-medium whitespace-nowrap opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-xl z-50">
-              Favoritos
+              Favorites
               <div className="absolute left-0 top-1/2 -translate-x-1 -translate-y-1/2 w-2 h-2 bg-[#1a1e1f] border-l border-b border-white/10 rotate-45" />
             </div>
           </button>
@@ -286,7 +286,7 @@ export default function DashboardPage() {
                 : "text-white/40 group-hover:text-white/70 group-hover:rotate-90"
             }`} />
             <div className="absolute left-full ml-3 px-3 py-1.5 bg-[#1a1e1f] border border-white/10 rounded-lg text-white text-xs font-medium whitespace-nowrap opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-xl z-50">
-              Configurações
+              Settings
               <div className="absolute left-0 top-1/2 -translate-x-1 -translate-y-1/2 w-2 h-2 bg-[#1a1e1f] border-l border-b border-white/10 rotate-45" />
             </div>
           </button>
@@ -301,7 +301,7 @@ export default function DashboardPage() {
           >
             <LogOut className="w-5 h-5 text-white/40 group-hover:text-red-500 transition-colors" />
             <div className="absolute left-full ml-3 px-3 py-1.5 bg-[#1a1e1f] border border-white/10 rounded-lg text-white text-xs font-medium whitespace-nowrap opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-xl z-50">
-              Sair
+              Logout
               <div className="absolute left-0 top-1/2 -translate-x-1 -translate-y-1/2 w-2 h-2 bg-[#1a1e1f] border-l border-b border-white/10 rotate-45" />
             </div>
           </button>
@@ -314,7 +314,7 @@ export default function DashboardPage() {
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white/40 z-10" />
           <input
             type="text"
-            placeholder="Buscar músicas, artistas..."
+            placeholder="Search songs, artists..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             onFocus={() => setIsSearchFocused(true)}
@@ -339,14 +339,14 @@ export default function DashboardPage() {
               {loadingSearch ? (
                 <div className="p-8 flex flex-col items-center gap-3">
                   <Loader2 className="w-8 h-8 text-[#FF4532] animate-spin" />
-                  <span className="text-white/50 text-sm">Buscando...</span>
+                  <span className="text-white/50 text-sm">Searching...</span>
                 </div>
               ) : searchResults.length > 0 ? (
                 <div className="divide-y divide-white/5">
                   {/* Results Header */}
                   <div className="px-4 py-3 bg-white/5">
                     <span className="text-white/50 text-xs font-medium uppercase tracking-wider">
-                      {searchResults.length} resultado{searchResults.length !== 1 ? 's' : ''} para "{debouncedQuery}"
+                      {searchResults.length} result{searchResults.length !== 1 ? 's' : ''} for "{debouncedQuery}"
                     </span>
                   </div>
                   
@@ -422,9 +422,9 @@ export default function DashboardPage() {
                 <div className="p-8 flex flex-col items-center gap-3">
                   <Music className="w-12 h-12 text-white/20" />
                   <span className="text-white/50 text-sm">
-                    {debouncedQuery ? 'Nenhum resultado encontrado' : 'Digite para buscar...'}
+                    {debouncedQuery ? 'No results found' : 'Type to search...'}
                   </span>
-                  {debouncedQuery && <span className="text-white/30 text-xs">Tente buscar por outro termo</span>}
+                  {debouncedQuery && <span className="text-white/30 text-xs">Try searching for another term</span>}
                 </div>
               )}
             </div>
@@ -556,7 +556,7 @@ export default function DashboardPage() {
                   </div>
                   
                   <div className="relative z-10 p-12 h-full flex flex-col justify-between max-w-[60%]">
-                    <span className="text-white/80 text-sm font-medium uppercase tracking-wider">Em destaque</span>
+                    <span className="text-white/80 text-sm font-medium uppercase tracking-wider">Featured</span>
                     
                     <div>
                       <h2 className="text-[32px] font-bold text-white mb-2 line-clamp-2 drop-shadow-lg">
@@ -567,7 +567,7 @@ export default function DashboardPage() {
                       </p>
                       {featuredTracks[bannerIndex]?.duration && (
                         <p className="text-white/60 text-sm mt-2">
-                          Duração: {featuredTracks[bannerIndex]?.duration}
+                          Duration: {featuredTracks[bannerIndex]?.duration}
                         </p>
                       )}
                     </div>
@@ -595,7 +595,7 @@ export default function DashboardPage() {
                 </>
               ) : (
                 <div className="absolute inset-0 bg-white/5 flex items-center justify-center">
-                  <span className="text-white/50">Carregando...</span>
+                  <span className="text-white/50">Loading...</span>
                 </div>
               )}
             </div>

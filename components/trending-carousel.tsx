@@ -8,8 +8,8 @@ import { Button } from "@/components/ui/button"
 const trendingPlaylists = [
   {
     id: "1",
-    title: "Top 50 Brasil",
-    description: "As músicas mais ouvidas do momento",
+    title: "Top 50 Brazil",
+    description: "The most listened songs right now",
     image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=400&fit=crop",
     tracks: 50,
   },
@@ -112,7 +112,7 @@ export function TrendingCarousel() {
               {playlist.title}
             </h3>
             <p className="text-xs text-muted-foreground truncate">{playlist.description}</p>
-            <p className="text-xs text-muted-foreground mt-1">{playlist.tracks} músicas</p>
+            <p className="text-xs text-muted-foreground mt-1">{playlist.tracks} songs</p>
           </div>
         ))}
       </div>

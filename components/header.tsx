@@ -25,13 +25,13 @@ export function Header() {
           
           <nav className="hidden md:flex items-center gap-1">
             <Link href="/" className="px-3 py-2 text-sm text-white hover:bg-secondary rounded transition-colors">
-              Início
+              Home
             </Link>
             <Link href="/feed" className="px-3 py-2 text-sm text-muted-foreground hover:text-white hover:bg-secondary rounded transition-colors">
               Feed
             </Link>
             <Link href="/library" className="px-3 py-2 text-sm text-muted-foreground hover:text-white hover:bg-secondary rounded transition-colors">
-              Biblioteca
+              Library
             </Link>
           </nav>
         </div>
@@ -42,7 +42,7 @@ export function Header() {
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
             <input
               type="text"
-              placeholder="Pesquisar artistas, músicas, playlists..."
+              placeholder="Search artists, songs, playlists..."
               className="w-full bg-[#1a1a1a] border border-border rounded-sm pl-10 pr-4 py-2 text-sm text-white placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
             />
           </div>
@@ -58,10 +58,10 @@ export function Header() {
           </Button>
           
           <Button className="bg-primary hover:bg-primary/90 text-white text-sm px-4 hidden sm:flex">
-            Entrar
+            Sign In
           </Button>
           <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white text-sm px-4 hidden sm:flex">
-            Criar conta
+            Create Account
           </Button>
 
           <Button 
@@ -83,28 +83,28 @@ export function Header() {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
               <input
                 type="text"
-                placeholder="Pesquisar..."
+                placeholder="Search..."
                 className="w-full bg-[#1a1a1a] border border-border rounded-sm pl-10 pr-4 py-2 text-sm text-white placeholder:text-muted-foreground focus:outline-none focus:border-primary"
               />
             </div>
           </div>
           <nav className="flex flex-col gap-2">
             <Link href="/" className="px-3 py-2 text-sm text-white hover:bg-secondary rounded">
-              Início
+              Home
             </Link>
             <Link href="/feed" className="px-3 py-2 text-sm text-muted-foreground hover:text-white hover:bg-secondary rounded">
               Feed
             </Link>
             <Link href="/library" className="px-3 py-2 text-sm text-muted-foreground hover:text-white hover:bg-secondary rounded">
-              Biblioteca
+              Library
             </Link>
           </nav>
           <div className="flex gap-2 mt-4">
             <Button className="flex-1 bg-primary hover:bg-primary/90 text-white text-sm">
-              Entrar
+              Sign In
             </Button>
             <Button variant="outline" className="flex-1 border-primary text-primary hover:bg-primary hover:text-white text-sm">
-              Criar conta
+              Create Account
             </Button>
           </div>
         </div>
