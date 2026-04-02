@@ -17,8 +17,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'ZIG - Sem Limites, Só Música',
-  description: 'O primeiro app 100% grátis para ouvir músicas em tempo real com seus amigos. Sem limites, sem anúncios.',
+  title: 'ZIG - No Limits, Just Music',
+  description: 'The first 100% free app to listen to music in real-time with your friends. No limits, no ads.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -41,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" className="dark">
+    <html lang="en" className="dark">
       <body className={`${poppins.variable} ${inter.variable} font-sans antialiased bg-background text-foreground`}>
         <Providers>
           {children}
