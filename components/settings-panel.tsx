@@ -233,6 +233,7 @@ export function SettingsPanel() {
           { id: "security", label: "Security", icon: Lock },
           { id: "2fa", label: "2FA", icon: Shield },
           { id: "wallet", label: "Wallet", icon: Wallet },
+          { id: "downloads", label: "Downloads", icon: Download },
           { id: "partner", label: "Partner Invite", icon: Gift },
         ].map((tab) => (
           <button
@@ -652,6 +653,151 @@ export function SettingsPanel() {
                       </p>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {activeTab === "downloads" && (
+          <div className="space-y-6">
+            {/* Desktop App Download */}
+            <div className="bg-gradient-to-br from-[#FF4532]/20 to-[#FF867E]/10 border border-[#FF4532]/30 rounded-2xl p-8">
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 bg-[#FF4532] rounded-2xl flex items-center justify-center flex-shrink-0">
+                  <Download className="w-8 h-8 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-white font-bold text-2xl mb-2">ZIG Music Desktop App</h3>
+                  <p className="text-white/70 text-base mb-6">
+                    Download the official ZIG Music desktop application for the best listening experience. 
+                    Enjoy high-quality audio, offline mode, and exclusive features.
+                  </p>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div className="bg-white/5 rounded-xl p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Check className="w-5 h-5 text-green-500" />
+                        <span className="text-white font-medium">High-Quality Audio</span>
+                      </div>
+                      <p className="text-white/60 text-sm">Lossless streaming up to 320kbps</p>
+                    </div>
+                    <div className="bg-white/5 rounded-xl p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Check className="w-5 h-5 text-green-500" />
+                        <span className="text-white font-medium">Offline Mode</span>
+                      </div>
+                      <p className="text-white/60 text-sm">Download and listen anywhere</p>
+                    </div>
+                    <div className="bg-white/5 rounded-xl p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Check className="w-5 h-5 text-green-500" />
+                        <span className="text-white font-medium">No Ads</span>
+                      </div>
+                      <p className="text-white/60 text-sm">Uninterrupted music experience</p>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-4">
+                    <a
+                      href="/cdn/ZigMusic-Setup.exe"
+                      download
+                      className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black rounded-xl font-bold hover:bg-white/90 transition-all hover:scale-105 hover:shadow-[0_10px_30px_rgba(255,255,255,0.2)]"
+                    >
+                      <Download className="w-5 h-5" />
+                      Download for Windows
+                    </a>
+                  </div>
+
+                  <div className="mt-6 bg-blue-500/10 border border-blue-500/30 rounded-xl p-4">
+                    <div className="flex items-start gap-3">
+                      <AlertCircle className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="text-blue-400 text-sm font-medium mb-1">System Requirements</p>
+                        <ul className="text-blue-300/80 text-sm space-y-1">
+                          <li>• Windows 10 or later (64-bit)</li>
+                          <li>• 4GB RAM minimum (8GB recommended)</li>
+                          <li>• 500MB free disk space</li>
+                          <li>• Internet connection for streaming</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* ZIG Wallet Download */}
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                  <Wallet className="w-8 h-8 text-purple-500" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-white font-bold text-xl mb-2">ZIG Wallet</h3>
+                  <p className="text-white/70 mb-4">
+                    Manage your ZIGpay account, view earnings, and configure API keys for partner program.
+                  </p>
+                  
+                  <a
+                    href="/cdn/ZigWallet.exe"
+                    download
+                    className="inline-flex items-center gap-3 px-6 py-3 bg-purple-500 hover:bg-purple-600 text-white rounded-xl font-medium transition-all hover:scale-105"
+                  >
+                    <Download className="w-5 h-5" />
+                    Download ZIG Wallet
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile Apps (Coming Soon) */}
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center">
+                  <Download className="w-5 h-5 text-white/40" />
+                </div>
+                <div>
+                  <h3 className="text-white font-semibold">Mobile Apps</h3>
+                  <p className="text-white/50 text-sm">Coming soon to iOS and Android</p>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-white/5 rounded-xl p-4 opacity-50">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
+                      <span className="text-2xl"></span>
+                    </div>
+                    <div>
+                      <p className="text-white font-medium">iOS App</p>
+                      <p className="text-white/60 text-sm">iPhone & iPad</p>
+                    </div>
+                  </div>
+                  <button
+                    disabled
+                    className="w-full px-4 py-2 bg-white/10 text-white/40 rounded-lg font-medium cursor-not-allowed"
+                  >
+                    Coming Soon
+                  </button>
+                </div>
+
+                <div className="bg-white/5 rounded-xl p-4 opacity-50">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
+                      <span className="text-2xl">🤖</span>
+                    </div>
+                    <div>
+                      <p className="text-white font-medium">Android App</p>
+                      <p className="text-white/60 text-sm">All Android devices</p>
+                    </div>
+                  </div>
+                  <button
+                    disabled
+                    className="w-full px-4 py-2 bg-white/10 text-white/40 rounded-lg font-medium cursor-not-allowed"
+                  >
+                    Coming Soon
+                  </button>
                 </div>
               </div>
             </div>
